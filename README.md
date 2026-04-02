@@ -1,6 +1,6 @@
-# codeforth
+# codegds
 
-Forth syntax highlighting for [Typst](https://typst.app/).
+GDscript syntax highlighting for [Typst](https://typst.app/).
 
 ![](example.png)
 
@@ -17,7 +17,7 @@ Forth syntax highlighting for [Typst](https://typst.app/).
 
 ## Credits
 
-- Syntax patterns informed by [mitranim/sublime-forth](https://github.com/mitranim/sublime-forth)
+- Syntax patterns informed by [dementive/SublimeGodot](https://github.com/dementive/SublimeGodot)
 
 ## License
 
