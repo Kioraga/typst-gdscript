@@ -1,38 +1,21 @@
-// Import the Forth syntax
-#import "lib.typ": forth-syntax
+// Import the GDScript syntax
+#import "codegds.typ": gdscript-syntax
 
 // Apply the syntax highlighting
-#set raw(syntaxes: forth-syntax)
+#set raw(syntaxes: gdscript-syntax)
 
-= Forth Syntax Highlighting Example
+= GDScript Syntax Highlighting Example
 
-Here's a simple Forth program with syntax highlighting:
+Here's a simple GDScript program with syntax highlighting:
 
-```forth
-\ This is a line comment
-( This is a block comment )
-
-: square ( n -- n^2 )
-  dup * ;
-
-: factorial ( n -- n! )
-  dup 1 > if
-    dup 1 - recurse *
-  else
-    drop 1
-  then ;
-
-variable counter
-10 constant max-value
-
-: main
-  0 counter !
-  begin
-    counter @ 1 + dup counter !
-    dup square .
-    max-value >=
-  until
-  cr ." Done!" cr ;
-
-main
+```gdscript
+func process_items(items: Array) -> void:
+	# Check if the array is empty
+	if items.is_empty():
+		print("No items to process")
+		return
+	
+	# Process each item
+	for item in items:
+		print("Processing: ", item)
 ```

@@ -7,11 +7,19 @@ GDscript syntax highlighting for [Typst](https://typst.app/).
 ## Installation
 
 ````typst
-#import "@preview/codeforth:0.1.0": forth-syntax
-#set raw(syntaxes: forth-syntax)
+#import "@preview/codegds:0.1.0": gdscript-syntax
+#set raw(syntaxes: gdscript-syntax)
 
-```forth
-: fun 1 2 + ;
+```gdscript
+func process_items(items: Array) -> void:
+	# Check if the array is empty
+	if items.is_empty():
+		print("No items to process")
+		return
+	
+	# Process each item
+	for item in items:
+		print("Processing: ", item)
 ```
 ````
 
