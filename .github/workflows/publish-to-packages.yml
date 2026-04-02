@@ -58,6 +58,8 @@ jobs:
           VERSION: ${{ steps.pkg.outputs.version }}
         run: |
           cd dest
+          BRANCH="publish/$NAME-$VERSION"
+          git checkout -B "$BRANCH"
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes to commit."
             exit 0
@@ -66,4 +68,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "packages/preview/$NAME/$VERSION"
           git commit -m "Publish $NAME $VERSION"
-          git push
+          git push --set-upstream origin "$BRANCH"
